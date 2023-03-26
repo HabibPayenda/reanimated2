@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native'
-import PanGestureHandler from './Animations/PanGestureHandler'
+import PanGestureHandlerAnimation from './Animations/PanGestureHandlerAnimation'
 import ReanimatedBasics from './Animations/ReanimatedBasics'
 
 
@@ -8,7 +8,7 @@ export default function StructureComponent({title}) {
     <View style={styles.container}>
       <Text>{title}</Text>
       <View style={styles.animationContainer}> 
-        <PanGestureHandler />
+        <PanGestureHandlerAnimation />
       </View>
     </View>
   )
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   animationContainer: {
     alignItems: "center",
     justifyContent: 'center',
-    flex: 1
+    flex: 1,
+    width: 400
   }
 })
