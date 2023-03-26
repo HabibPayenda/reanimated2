@@ -20,9 +20,12 @@ export default function PanGestureHandlerAnimation() {
       trnaslateX.value = e.translationX + ctx.x;
       trnaslateY.value = e.translationY + ctx.y;
     },
-    onEnd: () => {
-      trnaslateX.value = withSpring(0);
-      trnaslateY.value = withSpring(0)
+    onEnd: (e, ctx) => {
+      const distance = Math.sqrt(trnaslateX.value ** 2 + trnaslateY.value ** 2);
+      if (distance < CIRCLE_RADIUS + SIZE / 2) {
+        trnaslateX.value = withSpring(0);
+        trnaslateY.value = withSpring(0)
+      }
     }
   })
 
