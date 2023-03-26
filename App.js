@@ -14,7 +14,7 @@ export default function App() {
           <Text style={styles.title}>Reanimated</Text>
         </View>
         <View style={styles.animationView}>
-          <StructureComponent  title='Reanimated Basics' />
+          <StructureComponent  title='Pan Gesture Handler' />
         </View>
       </View>
     </>

@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native'
+import PanGestureHandler from './Animations/PanGestureHandler'
 import ReanimatedBasics from './Animations/ReanimatedBasics'
 
 
@@ -7,7 +8,7 @@ export default function StructureComponent({title}) {
     <View style={styles.container}>
       <Text>{title}</Text>
       <View style={styles.animationContainer}> 
-        <ReanimatedBasics />
+        <PanGestureHandler />
       </View>
     </View>
   )
