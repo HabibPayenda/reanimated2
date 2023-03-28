@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,Dimensions } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import ReanimatedBasics from './Animations/ReanimatedBasics';
+import SvgComponent from './src/components/svg';
 import StructureComponent from './SturctureComponent';
 
 const height = Dimensions.get('window').height;
@@ -16,7 +17,8 @@ export default function App() {
           <Text style={styles.title}>Reanimated</Text>
         </View>
         <View style={styles.animationView}>
-          <StructureComponent  title='Pan Gesture Handler' />
+          {/* <StructureComponent  title='Pan Gesture Handler' /> */}
+          <SvgComponent />
         </View>
       </View>
       </GestureHandlerRootView>
